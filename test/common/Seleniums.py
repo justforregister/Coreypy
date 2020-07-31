@@ -22,7 +22,7 @@ class BasePage(object):
         :param driver:打开浏览器驱动
         """
         self.driver = driver
-        self.sc =Config()
+        self.sc = Config()
 
     def get_page_title(self):
         logger.info("当前页面的title为: %s" % self.driver.title)
@@ -56,18 +56,18 @@ class BasePage(object):
             #self.log.myloggger('Can not find element: %s' % loc[1], flag=2)
             raise
 
-    def get_screent_img(self,value):
-        '''将页面截图下来'''
-        file_path = './report/screenshot/'
-        image_path = self.sc.screen_shot_path()
-        now = time.strftime("%Y-%m-%d_%H_%M_%S_")
-        screen_name = image_path+value+'.png'
-        try:
-            self.driver.get_screenshot_as_file(screen_name)
-            logger.info("页面已截图，截图的路径在项目: %s "%image_path)
-        except NameError as ne:
-            logger.error("失败截图 %s" % ne)
-            self.get_screent_img(value)
+    # def get_screent_img(self,value):
+    #     '''将页面截图下来'''
+    #     file_path = './report/screenshot/'
+    #     image_path = self.sc.()
+    #     now = time.strftime("%Y-%m-%d_%H_%M_%S_")
+    #     screen_name = image_path+value+'.png'
+    #     try:
+    #         self.driver.get_screenshot_as_file(screen_name)
+    #         logger.info("页面已截图，截图的路径在项目: %s "%image_path)
+    #     except NameError as ne:
+    #         logger.error("失败截图 %s" % ne)
+    #         self.get_screent_img(value)
 
     def send_key(self, loc, text):
         logger.info('清空文本框内容: %s...' % loc[1])

@@ -1,9 +1,11 @@
-#!/usr/bin/python3
-# -*- coding: utf-8 -*-
-#!/usr/bin/python3
-# -*- coding: utf-8 -*-
-# @Author  : Vant
-# @Email   : 944921374@qq.com
+'''
+@Author: Corey He
+@Description: 
+@Date: 2020-07-31 11:42:51
+@LastEditTime: 2020-07-31 16:20:03
+@LastEditors: Corey He
+@FilePath: \Vantpy\test\testcase\test_Baidu.py
+'''
 
 import unittest
 import sys
@@ -18,5 +20,5 @@ class BaiduCase(model):
         baidu = BaiduPage(self.driver)
         baidu.input_baidu_text('selenium')
         baidu.click_baidu_btn()
-        baidu.get_screent_img("baidu")
+        # baidu.get_screent_img("baidu")
         self.assertIn('selenium',self.driver.title)

@@ -1,3 +1,11 @@
+'''
+@Author: Corey He
+@Description: 
+@Date: 2020-07-31 11:42:51
+@LastEditTime: 2020-07-31 16:27:09
+@LastEditors: Corey He
+@FilePath: \Vantpy\run.py
+'''
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 import os
@@ -14,8 +22,8 @@ def create_suite():
     # print(test_dir)
 
     discover = unittest.defaultTestLoader.discover(
-        start_dir=test_dir,
-        pattern='test_login.py',
+        start_dir = test_dir,
+        pattern = 'test_*.py',
         top_level_dir=None
     )
 

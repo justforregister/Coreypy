@@ -581,6 +581,8 @@ class _TestResult(TestResult):
         # )
         self.result = []
         self.subtestlist = []
+        self.outputBuffer = io.StringIO()
+        self.test_start_time = round(time.time(), 2)
 
     def startTest(self, test):
         TestResult.startTest(self, test)
