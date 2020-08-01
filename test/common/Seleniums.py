@@ -78,7 +78,7 @@ class BasePage(object):
             #self.log.myloggger('Input: %s' % text, flag=0)
         try:
             self.find_element(*loc).send_keys(text)
-            time.sleep(2)
+            time.sleep(1)
         except Exception as e:
             logger.error("输入内容失败 %s" % e)
             self.get_screent_img(text)
@@ -87,7 +87,7 @@ class BasePage(object):
         logger.info('点击元素 by %s: %s...' % (loc[0], loc[1]))
         try:
             self.find_element(*loc).click()
-            time.sleep(2)
+            time.sleep(1)
         except AttributeError as e:
             logger.error("无法点击元素: %s" % e)
             raise

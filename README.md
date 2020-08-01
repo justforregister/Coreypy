@@ -70,7 +70,7 @@ class BaiduPage(BasePage):
 #### 读取yaml数据
 
 ```
-brwserType:
+browserType:
   browserName : Chrome
 
 testUrl:

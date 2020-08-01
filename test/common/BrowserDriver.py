@@ -2,9 +2,9 @@
 @Author: Corey He
 @Description: 
 @Date: 2020-07-31 11:42:51
-@LastEditTime: 2020-07-31 16:35:16
+@LastEditTime: 2020-08-01 10:04:27
 @LastEditors: Corey He
-@FilePath: \Vantpy\test\common\BrowserDriver.py
+@FilePath: \Coreypy\test\common\BrowserDriver.py
 '''
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
@@ -28,9 +28,9 @@ class BrowserDriver(object):
         self.c = Config()
 
     def openbrowser(self,driver):
-        browser = self.c.get("brwserType").get("browserName")
+        browser = self.c.get("browserType").get("browserName")
         logger.info("选择的浏览器为: %s 浏览器" % browser)
-        url = self.c.get('ptahUrl').get('URL')
+        url = self.c.get('pathUrl').get('URL')
         logger.info("打开的URL为: %s" % url)
         if browser == "Firefox":
             driver = webdriver.Firefox()
@@ -57,8 +57,8 @@ class BrowserDriver(object):
 
         driver.get(url)
         logger.info("打开URL: %s" % url)
-        driver.maximize_window()
-        logger.info("全屏当前窗口")
+        # driver.maximize_window()
+        # logger.info("全屏当前窗口")
         driver.implicitly_wait(5)
         logger.info("设置5秒隐式等待时间")
         return driver

@@ -1,7 +1,9 @@
-brwserType:
+browserType:
 #  browserName : Firefox
   browserName : Chrome
   #browserName : IE
 
-ptahUrl:
-  URL : https://www.baidu.com
+pathUrl:
+  # Baidu : https://www.baidu.com
+  # Douban : https://accounts.douban.com/passport/login
+  URL: 'about:blank'

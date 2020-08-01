@@ -18,7 +18,12 @@ class BaiduCase(model):
 
     def test_baidu1(self):
         baidu = BaiduPage(self.driver)
+        baidu.goto_baidu()
         baidu.input_baidu_text('selenium')
         baidu.click_baidu_btn()
         # baidu.get_screent_img("baidu")
         self.assertIn('selenium',self.driver.title)
+
+
+if __name__ == "__main__":
+    unittest.main()

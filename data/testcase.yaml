@@ -1,4 +1,8 @@
-login:
-  username : admin
-  password : 111111
+test_Douban:
+  login_url: https://accounts.douban.com/passport/login
+  login:
+    username : xx@xx.com
+    password : 123
 
+test_Baidu:
+  url: https://www.baidu.com

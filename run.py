@@ -1,13 +1,13 @@
 '''
 @Author: Corey He
 @Description: 
-@Date: 2020-07-31 11:42:51
-@LastEditTime: 2020-07-31 16:27:09
+@Date: 2020-07-31 16:43:38
+@LastEditTime: 2020-08-01 16:24:36
 @LastEditors: Corey He
-@FilePath: \Vantpy\run.py
+@FilePath: \Coreypy\run.py
 '''
-#!/usr/bin/env python
-# -*- coding:utf-8 -*-
+
+
 import os
 import sys
 import time
